@@ -793,6 +793,27 @@ define({ "api": [
             "optional": false,
             "field": "patient",
             "description": "<p>The id - ID.*</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>The name - name</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "birthDay",
+            "description": "<p>The birthDay - 12/31/1990</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "cpf",
+            "description": "<p>The cpf - 12345678998</p>"
           }
         ]
       }
