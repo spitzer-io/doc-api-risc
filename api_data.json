@@ -519,12 +519,12 @@
   },
   {
     "type": "get",
-    "url": "/api-risc/schedule-sync/doctors/profile",
+    "url": "/doctoralia/schedule-sync/doctors/profile/:calendarId",
     "title": "Profile Doctor.",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl--request GET\\\n   --url 'http://api.spitzer.io/api-risc/schedule-sync/doctors/profile?customer=5ce5e06d2a311a13c55505b9&crm=15904'\\\n     --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQGRvY3RvcmFsaWEuY29tIiwiaWQiOiI1ZTI1ZTI1ZjRmZTUyOTU1ZjM0ODc1YTkiLCJpYXQiOjE1Nzk1NDExMjgsImV4cCI6MTU3OTYyNzUyOH0.XPmkzNxlsxn8dW6fRNVoF5HOcsLhaLpWV7NBhyfYUcc'",
+        "content": "curl--request GET\\\n   --curl --request GET \\\n   --url 'http://api.spitzer.io/doctoralia/schedule-sync/doctors/profile/eyJhbGciOiJIUzI1NiJ9.MTM1ODkkMQ.e6YodxjY3HNg8cgCnf8gnT3RHaAQENxT5QjHsKnPJk0?customer=5e4ee35b462560492f99a162&crm=13589' \\\n   --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQHJpc2MuY29tIiwiaWQiOiI1ZThkMmZhYTQyYTI4MDE1YmUzMzYxODAiLCJpYXQiOjE1ODc1NjcxNjAsImV4cCI6MTU4NzY1MzU2MH0.ha2tccj0VLRDVO82FI3cN7wl80uX8us17hxOCjXcYXI' \\\n   --cookie __cfduid=d50911b677afc4146169a8902e1aa63f71558381007",
         "type": "curl"
       }
     ],
@@ -633,7 +633,7 @@
       "examples": [
         {
           "title": "Success",
-          "content": "HTTP/1.1 200 OK\n[{\n  \"id\": 1,\n  \"crm\": 1,\n  \"name\": Joao,\n  \"advice\": 11876,\n  \"email\": joao@joao.com,\n  \"specialist\": \"Cardiologia\"\n}]",
+          "content": "HTTP/1.1 200 OK\n[{\n       \"id\": 13589,\n       \"crm\": 13589,\n       \"name\": \"Adriano Pienaro Chrisostomo\",\n       \"cpf\": \"12365478932\",\n       \"advice\": 0,\n       \"email\": \"stage@spitzer.com.br\",\n       \"codeHealthInsurance\": 110,\n       \"healthInsurance\": \"ICS\"\n     },\n     \"calendarId\": \"eyJhbGciOiJIUzI1NiJ9.MTM1ODkkMQ.e6YodxjY3HNg8cgCnf8gnT3RHaAQENxT5QjHsKnPJk0\",\n     \"codeHealthInsurance\": [\n     {\n       \"codeHealthInsurance\": 110,\n       \"healthInsurance\": \"ICS\"\n     },\n}]",
           "type": "json"
         }
       ]
