@@ -65,12 +65,25 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -X POST \\\n  http://api.spitzer.io/api-risc/schedule-sync/login \\\n  -H 'Host: api.spitzer.io' \\\n  -d 'username=setup@risc.com&password=nw1clyYuOeAWWf0wjF7AlVKm'",
+        "content": "curl --request POST \\\n      --url https://api.spitzer.io/api-risc/schedule-sync/login \\\n      --header 'Authorization: 23asd1f23sa1fs23df1s2df1' \\\n      --header 'Content-Type: application/x-www-form-urlencoded' \\\n      --data username=teste@teste.com \\\n      --data password=12345678",
         "type": "curl"
       }
     ],
     "group": "Auth",
     "name": "PostAuthLogin",
+    "header": {
+      "fields": {
+        "Auth": [
+          {
+            "group": "Auth",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>You must pass your username and password, separated by: in base64 format, example of this user, teste@teste.com:12345678</p>"
+          }
+        ]
+      }
+    },
     "success": {
       "fields": {
         "Success 200": [
@@ -79,7 +92,7 @@ define({ "api": [
             "type": "Object[]",
             "optional": false,
             "field": "result",
-            "description": "<p>Task's list</p>"
+            "description": "<p>Login's list</p>"
           },
           {
             "group": "Success 200",
@@ -519,12 +532,12 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/doctoralia/schedule-sync/doctors/profile/:calendarId",
+    "url": "/api-risc/schedule-sync/doctors/profile/:calendarId",
     "title": "Profile Doctor.",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl--request GET\\\n   --curl --request GET \\\n   --url 'http://api.spitzer.io/doctoralia/schedule-sync/doctors/profile/eyJhbGciOiJIUzI1NiJ9.MTM1ODkkMQ.e6YodxjY3HNg8cgCnf8gnT3RHaAQENxT5QjHsKnPJk0?customer=5e4ee35b462560492f99a162&crm=13589' \\\n   --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQHJpc2MuY29tIiwiaWQiOiI1ZThkMmZhYTQyYTI4MDE1YmUzMzYxODAiLCJpYXQiOjE1ODc1NjcxNjAsImV4cCI6MTU4NzY1MzU2MH0.ha2tccj0VLRDVO82FI3cN7wl80uX8us17hxOCjXcYXI' \\\n   --cookie __cfduid=d50911b677afc4146169a8902e1aa63f71558381007",
+        "content": "curl--request GET\\\n   --curl --request GET \\\n   --url 'http://api.spitzer.io/api-risc/schedule-sync/doctors/profile/eyJhbGciOiJIUzI1NiJ9.MTM1ODkkMQ.e6YodxjY3HNg8cgCnf8gnT3RHaAQENxT5QjHsKnPJk0?customer=5e4ee35b462560492f99a162&crm=13589' \\\n   --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQHJpc2MuY29tIiwiaWQiOiI1ZThkMmZhYTQyYTI4MDE1YmUzMzYxODAiLCJpYXQiOjE1ODc1NjcxNjAsImV4cCI6MTU4NzY1MzU2MH0.ha2tccj0VLRDVO82FI3cN7wl80uX8us17hxOCjXcYXI' \\\n   --cookie __cfduid=d50911b677afc4146169a8902e1aa63f71558381007",
         "type": "curl"
       }
     ],
@@ -967,7 +980,7 @@ define({ "api": [
             "type": "Date",
             "optional": false,
             "field": "result.end_datetime",
-            "description": "<p>Schedule end_datetime?</p>"
+            "description": "<p>Schedule end_datetime</p>"
           },
           {
             "group": "Success 200",
