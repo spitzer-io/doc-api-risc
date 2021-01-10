@@ -29,5 +29,5 @@ echo "------------------- $(date) -------------------"
 
 
 
-npx apidoc -i ./src/http/routes/doctoralia -o ../doc-doctoralia
-npx apidoc -i ./src/http/routes/api-risc -o ../doc-api-risc
+#npx apidoc -i ./src/http/routes/doctoralia -o ../doc-doctoralia
+#npx apidoc -i ./src/http/routes/api-risc -o ../doc-api-risc
