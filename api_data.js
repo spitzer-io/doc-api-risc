@@ -774,12 +774,12 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/api-risc/patient",
-    "title": "List all patient",
+    "url": "/doctoralia/patient",
+    "title": "List Patient",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl--request GET\\\n   --url 'https://api.spizter.io/api-risc/patient?customer=5ce5e06d2a311a13c55505b9'\\\n     --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQGRvY3RvcmFsaWEuY29tIiwiaWQiOiI1ZTI1ZTI1ZjRmZTUyOTU1ZjM0ODc1YTkiLCJpYXQiOjE1Nzk1NDExMjgsImV4cCI6MTU3OTYyNzUyOH0.XPmkzNxlsxn8dW6fRNVoF5HOcsLhaLpWV7NBhyfYUcc'",
+        "content": "curl--request GET\\\n   --url 'https://api.spizter.io/doctoralia/patient?customer=5ce5e06d2a311a13c55505b9'\\\n     --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQGRvY3RvcmFsaWEuY29tIiwiaWQiOiI1ZTI1ZTI1ZjRmZTUyOTU1ZjM0ODc1YTkiLCJpYXQiOjE1Nzk1NDExMjgsImV4cCI6MTU3OTYyNzUyOH0.XPmkzNxlsxn8dW6fRNVoF5HOcsLhaLpWV7NBhyfYUcc'",
         "type": "curl"
       }
     ],
@@ -806,27 +806,6 @@ define({ "api": [
             "optional": false,
             "field": "patient",
             "description": "<p>The id - ID.*</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "name",
-            "description": "<p>The name - name</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "birthDay",
-            "description": "<p>The birthDay - 12/31/1990</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "cpf",
-            "description": "<p>The cpf - 12345678998</p>"
           }
         ]
       }
@@ -874,7 +853,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success",
-          "content": "   HTTP/1.1 200 OK\n[{\n     \"id\": 3459,\n     \"name\": \"TESTE\",\n     \"cpf\": 212312312323,\n     \"birthDay\": \"1981-10-19T00:00:00.000Z\",\n     \"city\": \"Pinhais\",\n     \"state\": \"PR\",\n     \"address\": \"RUA TESTE\",\n     \"phone\": \"2123123123\",\n     \"mobile\": \"121123121\",\n     \"email\": \"teste@hotmail.com\",\n     \"cep\": 808540340,\n     \"healthInsuranceCode\": 111,\n     \"healthInsuranceName\": \"AMIL\"\n   }]",
+          "content": "   HTTP/1.1 200 OK\n[{\n     \"id\": 3459,\n     \"name\": \"TESTE\",\n     \"birthDay\": \"1981-10-19T00:00:00.000Z\",\n     \"city\": \"Pinhais\",\n     \"state\": \"PR\",\n     \"address\": \"RUA TESTE\",\n     \"phone\": \"2123123123\",\n     \"mobile\": \"121123121\",\n     \"email\": \"teste@hotmail.com\",\n     \"cep\": 808540340,\n     \"healthInsuranceCode\": 111,\n     \"healthInsuranceName\": \"AMIL\"\n   }]",
           "type": "json"
         }
       ]
