@@ -682,6 +682,140 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/api-risc/schedule-sync/patient/examination-report",
+    "title": "List examination-report",
+    "examples": [
+      {
+        "title": "Example usage:",
+        "content": "curl--request GET\\\n   --url 'http://api.spitzer.io/api-risc/schedule-sync/patient/examination-report?customer=5ce5e06d2a311a13c55505b9&record=1'\\\n     --header 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNldHVwQGRvY3RvcmFsaWEuY29tIiwiaWQiOiI1ZTI1ZTI1ZjRmZTUyOTU1ZjM0ODc1YTkiLCJpYXQiOjE1Nzk1NDExMjgsImV4cCI6MTU3OTYyNzUyOH0.XPmkzNxlsxn8dW6fRNVoF5HOcsLhaLpWV7NBhyfYUcc'",
+        "type": "curl"
+      }
+    ],
+    "permission": [
+      {
+        "name": "User"
+      }
+    ],
+    "group": "Examination_Report",
+    "description": "<p>List Examination Report</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "customer",
+            "description": "<p>The Customer - ID.*</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "record",
+            "description": "<p>The record - ID.*</p>"
+          }
+        ]
+      }
+    },
+    "name": "GetExaminationReport",
+    "header": {
+      "fields": {
+        "Auth": [
+          {
+            "group": "Auth",
+            "type": "String",
+            "optional": false,
+            "field": "x-access-token",
+            "description": "<p>Authentication token</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "Examination",
+            "description": "<p>Report Examination Report's list</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "result.id",
+            "description": "<p>Examination Record id</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.report",
+            "description": "<p>Examination Report report</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.reportTxt",
+            "description": "<p>Examination Report reportTxt</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.record",
+            "description": "<p>Examination Report record</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.doctor",
+            "description": "<p>Examination Report doctor</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.date",
+            "description": "<p>Examination Report date</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.requestingDoctor",
+            "description": "<p>Examination Report requestingDoctor</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success",
+          "content": "HTTP/1.1 200 OK\n[{\n  \"id\": 1,\n  \"report\": \"{\\\\rtf1\\\\ansi\\\\ansicpg1252\\\\deff0\\\\deflang1046{\\\\fonttbl{\\\\\"...,\n  \"reportTxt: \"{\\\\rtf1\\\\ansi\\\\ansicpg1252\\\\deff0\\\\deflang1046{\\\\fonttbl{\\\\\"...,\n  \"record\": 96635,\n  \"doctor\": \"VANESSA DABUL\",\n  \"date\": \"2020-05-12T00:00:00.000Z\",\n  \"requestingDoctor\": \"VANESSA MARIA DABUL\"\n}]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "List error",
+          "content": "HTTP/1.1 500 Internal Server Error",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/http/routes/api-risc/examination-report/index.js",
+    "groupTitle": "Examination_Report"
+  },
+  {
+    "type": "get",
     "url": "/api-risc/schedule-sync/health-insurance",
     "title": "List all health insurance",
     "examples": [
